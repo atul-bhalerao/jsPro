@@ -4,8 +4,15 @@ import '../sass/styles.sass'
 // Import all of Bootstrap's JS
 // import * as bootstrap from 'bootstrap'
 
-document.getElementById("demo").innerHTML = "Hello JavaScript";
+var $bodyWidth = document.documentElement.clientWidth;
 
-var $demo = document.getElementsByClassName("demoOne");
+var $lTablet = 1024;
+var $pTablet = 992;
 
-$demo[0].innerHTML = "Hello JavaScript";
+if ( $bodyWidth < $pTablet ) {
+    console.log("i m mobile");
+} else if ( $bodyWidth >= $lTablet ) {
+    console.log("i m Desktop");
+} else if ($bodyWidth >= $pTablet) {
+    console.log("i m Tablet");
+}
